@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
     //ITEM1
-    let item1 = document.getElementById("item1")
+    let item1 = document.getElementById("item1");
+    let itemV1 = document.getElementById("itemV1");
     var item = true;
 
-    item1.addEventListener("click", () => {
+    const dropDown = () => {
       let submenu = document.getElementById("submenu")
         if(item === true){
             submenu.className = "submenuV2 animate__animated animate__fadeInDown animate__faster"
@@ -13,13 +14,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
           submenu.className = "hidden"
           item = true;
         }
-    })
+    }
+
+    item1.onclick = dropDown;
+    itemV1.onclick = dropDown;
 
     //ITEM2
     let item2 = document.getElementById("item2")
+    let itemV2 = document.getElementById("itemV2")
     var prod = true;
 
-    item2.addEventListener("click", () => {
+    const deleteProduct = () => {
       if(prod === true){
           rigth.innerHTML = `
           <div class="rigth">
@@ -30,7 +35,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         location.reload();
         prod = true;
       }
-    })
+    }
+
+    item2.onclick = deleteProduct;
+    itemV2.onclick = deleteProduct;
 
     //ITEM3
     var item3 = document.getElementById("item3");
@@ -92,16 +100,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
       products.push(product)
     }
 
-    let rigth = document.querySelector(".rigth")
+    let rigth = document.querySelector(".rigth");
     var product;
     if(products && products.length > 0){
 
       products.forEach((point,i)=> {
-        product = document.createElement("div")
+        product = document.createElement("div");
+        product.className = "card"
         rigth.append(product)
         return (
           product.innerHTML = `
-          <div class="card" key=${i}>
             <div class="contentImage">
               <img id="imageCard" src=${point.image} alt="photo"/>
             </div>
@@ -111,7 +119,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
               <p>${point.price}</p>
               <button class="buy">COMPRAR</button>
             </div>
-          <div>
           `
         )
       })

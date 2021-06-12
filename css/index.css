@@ -28,7 +28,7 @@ body{
   justify-content: center;
 }
 .contentNav{
-  width: 1080px;
+  width: 82vw;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -62,7 +62,7 @@ body{
   margin-right: 1em;
   font-family: "Lato-Bold";
   font-size: 1rem;
-  color: 000000;
+  color: #000000;
   cursor: pointer;
   opacity: 1;
 }
@@ -87,7 +87,7 @@ body{
   margin:1em;
   font-family: "Lato-Bold";
   opacity: 1;
-  color: 000000;
+  color: #000000;
   cursor: pointer;
 }
 
@@ -97,8 +97,7 @@ main{
 }
 .container{
   display: flex;
-  justify-content: center;
-  width: 1088px;
+  width: 82vw;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -108,22 +107,23 @@ main{
   height: 619px;
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
 }
 .background{
   width: 100%;
   height: 100%;
   margin: 0.5em;
   background: #CA5310 0% 0% no-repeat padding-box;
+  box-sizing: border-box;
 }
 .backgroundV2{
   width: 100%;
   height: 100%;
   margin: 0.5em;
   background: #C4C4C4 0% 0% no-repeat padding-box;
+  box-sizing: border-box;
 }
 .rigth{
-  width: 888px;
+  width: 100%;
   height: 619px;
   display: flex;
   flex-direction: row;
@@ -195,15 +195,28 @@ main{
 
 /* MOBILE */
 @media screen and (max-width:480px){
+  .submenuV2{
+    top:8%;
+    left:35%;
+    z-index: 2;
+    background-color: white;
+  }
+}
+@media screen and (max-width:820px){
   .navbar{
     height: 70px;
+  }
+  .submenuV2{
+    top:8%;
+    z-index: 2;
+    background-color: white;
   }
   .resNoHidden{
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 3.4em;
-    width: 60%;
+    width: 80%;
     height: 100%;
     z-index: 1;
     background-color: white;
@@ -217,6 +230,7 @@ main{
   }
   .menu{
     display: flex;
+    cursor: pointer;
   }
   .menu img{
     width: 1.6em;
