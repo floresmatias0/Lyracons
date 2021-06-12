@@ -1,0 +1,173 @@
+html,
+body{
+  padding: 0;
+  margin: 0;
+}
+.navbar, .navbarV2{
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.navbar{
+  background: #C4C4C4 0% 0% no-repeat padding-box;
+  opacity: 0.7;
+}
+.navbarV2{
+  background-color: darkorange;
+}
+.contentNav{
+  width: 1080px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+.icon{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.icon img{
+  width: 7em;
+}
+.navbar ul, .navbarV2 ul{
+  padding: 0;
+  margin-left: 1em;
+  width: 888px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.navbar ul li, .navbarV2 ul li,#submenuV2 li{
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: 'Lato', sans-serif;
+}
+#submenu{
+  display: none;
+}
+#submenuV2{
+  position: absolute;
+  top: 5%;
+  left: 26%;
+  background: #C4C4C4 0% 0% no-repeat padding-box;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 170px;
+  height: 170px;
+  list-style: none;
+  z-index: 1;
+}
+#submenuV2 li{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+main{
+  width: 100%;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  width: 1088px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.left{
+  width: 200px;
+  height: 619px;
+}
+.left{
+  margin: 0.5em;
+  background: #CA5310 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.rigth{
+  width: 888px;
+  height: 619px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card{
+  width: 200px;
+  height: 300px;
+  background: #EAEAEA 0% 0% no-repeat padding-box;
+  border: 1px solid #000000;
+  opacity: 1;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.card h2, .card p{
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  margin: 0;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.card h2{
+  font-weight: bold !important;
+}
+.card button{
+  width: 170px;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+.contentImage{
+  margin: 1em;
+}
+#imageCard{
+  width: 170px;
+  height: 170px;
+}
+#submenuResponsivehidden,#submenuResponsive{
+  display: none;
+}
+.menu{
+  display: none;
+}
+@media screen and (max-width:480px){
+  #submenuV2{
+    display: none;
+  }
+  #submenuResponsive{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1em;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+  }
+  .menu{
+    display: flex;
+    width: 20%;
+  }
+  .icon{
+    width: 80%;
+  }
+  .contentNav,.container{
+    width: 100%;
+  }
+  .left,.navbar ul, .navbarV2 ul{
+    display: none !important;
+  }
+  .rigth{
+    width: 100%;
+    justify-content: center;
+  }
+}
