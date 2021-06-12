@@ -74,9 +74,9 @@ body{
   list-style: none;
   z-index: 1;
 }
-#submenuV2 li{
-  margin-top: 1em;
-  margin-bottom: 1em;
+.submenuV2 li{
+  margin:1em;
+  font-family: "Lato-Bold";
 }
 main{
   width: 100%;
@@ -159,6 +159,10 @@ main{
 .menu{
   display: none;
 }
+.parrafo{
+  text-align: center;
+  font-family: "Lato-Bold";
+}
 @media screen and (max-width:480px){
   .resNoHidden{
     display: flex;
@@ -187,6 +191,12 @@ main{
   }
   .icon{
     width: 80%;
+    height: 50px;
+  }
+  .icon img{
+    width: 165px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .contentNav,.container{
     width: 100%;

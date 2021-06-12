@@ -83,7 +83,9 @@ let item4 = document.getElementById("item4");
 var saludo = "Hola Mundo!"
   item4.addEventListener("click", () => {
     let text = document.createElement("p")
+    text.setAttribute("class", "parrafo")
     text.innerText = `${saludo}`
     let change = document.getElementById("change");
     change.append(text);
+    console.log(text === saludo)
   })
