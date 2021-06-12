@@ -1,3 +1,4 @@
+ /* FONTS DESCARGADAS DE GOOGLE FONT */
 @font-face {
   font-family: "Lato-Bold";
   src:url("../assets/fonts/Lato-Bold.ttf");
@@ -11,6 +12,12 @@ body{
   padding: 0;
   margin: 0;
 }
+ /* NAVBAR */
+ header{
+   width: 100%;
+   background: #C4C4C4 0% 0% no-repeat padding-box;
+   opacity: 0.7;
+ }
 .navbar{
   width: 100%;
   height: 50px;
@@ -19,10 +26,6 @@ body{
   left: 0;
   display: flex;
   justify-content: center;
-}
-.navbar{
-  background: #C4C4C4 0% 0% no-repeat padding-box;
-  opacity: 0.7;
 }
 .contentNav{
   width: 1080px;
@@ -39,7 +42,10 @@ body{
   align-self: center;
 }
 .icon img{
-  width: 7em;
+  width: 9em;
+  height: 2em;
+  display: flex;
+  align-self: center;
   opacity: 1;
 }
 .navbar ul {
@@ -51,11 +57,14 @@ body{
   flex-direction: row;
   align-self: center;
 }
-.navbar ul li, #submenuV2 li{
+.navbar ul li{
   margin-left: 1em;
   margin-right: 1em;
   font-family: "Lato-Bold";
+  font-size: 1rem;
+  color: 000000;
   cursor: pointer;
+  opacity: 1;
 }
 .hidden{
   display: none;
@@ -77,7 +86,12 @@ body{
 .submenuV2 li{
   margin:1em;
   font-family: "Lato-Bold";
+  opacity: 1;
+  color: 000000;
+  cursor: pointer;
 }
+
+ /* BODY */
 main{
   width: 100%;
 }
@@ -106,7 +120,7 @@ main{
   width: 100%;
   height: 100%;
   margin: 0.5em;
-  background: darkblue 0% 0% no-repeat padding-box;
+  background: #C4C4C4 0% 0% no-repeat padding-box;
 }
 .rigth{
   width: 888px;
@@ -115,6 +129,25 @@ main{
   flex-direction: row;
   flex-wrap: wrap;
 }
+.title{
+  text-align: center;
+  font-family: "Lato-Regular";
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resHidden{
+  display: none;
+}
+.menu{
+  display: none;
+}
+.parrafo{
+  text-align: center;
+  font-family: "Lato-Bold";
+}
+
+ /* CARD DE PRODUCTO */
 .card{
   width: 200px;
   height: 300px;
@@ -124,6 +157,9 @@ main{
   margin: 0.5em;
   display: flex;
   flex-direction: column;
+}
+.card:hover{
+  box-shadow: 2px 2px 5px black;
 }
 .card h2, .card p{
   font-size: 12px;
@@ -153,28 +189,27 @@ main{
   width: 170px;
   height: 170px;
 }
-.resHidden{
+.resNoHidden{
   display: none;
 }
-.menu{
-  display: none;
-}
-.parrafo{
-  text-align: center;
-  font-family: "Lato-Bold";
-}
+
+/* MOBILE */
 @media screen and (max-width:480px){
+  .navbar{
+    height: 70px;
+  }
   .resNoHidden{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 2.2em;
-    width: 100%;
+    top: 3.4em;
+    width: 60%;
     height: 100%;
     z-index: 1;
     background-color: white;
     padding: 0;
     list-style: none;
+    box-shadow: 0px 20px 20px darkgray;
   }
   .resNoHidden li{
     margin: 1em;
@@ -182,19 +217,24 @@ main{
   }
   .menu{
     display: flex;
-    width: 20%;
   }
   .menu img{
-    width: 2.5em;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1.6em;
+    height: 1.6em;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 1em;
   }
   .icon{
-    width: 80%;
+    width: 100%;
     height: 50px;
   }
   .icon img{
-    width: 165px;
+    width: 11em;
+    height: 2.6em;
+    padding-right: 4em;
+    margin-top: 0.3em;
     margin-left: auto;
     margin-right: auto;
   }
@@ -207,5 +247,13 @@ main{
   .rigth{
     width: 100%;
     justify-content: center;
+  }
+}
+@media screen and (max-width:1080px){
+  .contentNav{
+    width: 100%;
+  }
+  .navbar ul {
+    width: 100%
   }
 }
