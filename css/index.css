@@ -1,9 +1,17 @@
+@font-face {
+  font-family: "Lato-Bold";
+  src:url("../assets/fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src:url("../assets/fonts/Lato-Regular.ttf");
+}
 html,
 body{
   padding: 0;
   margin: 0;
 }
-.navbar, .navbarV2{
+.navbar{
   width: 100%;
   height: 50px;
   position: sticky;
@@ -15,9 +23,6 @@ body{
 .navbar{
   background: #C4C4C4 0% 0% no-repeat padding-box;
   opacity: 0.7;
-}
-.navbarV2{
-  background-color: darkorange;
 }
 .contentNav{
   width: 1080px;
@@ -35,8 +40,9 @@ body{
 }
 .icon img{
   width: 7em;
+  opacity: 1;
 }
-.navbar ul, .navbarV2 ul{
+.navbar ul {
   padding: 0;
   margin-left: 1em;
   width: 888px;
@@ -45,15 +51,16 @@ body{
   flex-direction: row;
   align-self: center;
 }
-.navbar ul li, .navbarV2 ul li,#submenuV2 li{
+.navbar ul li, #submenuV2 li{
   margin-left: 1em;
   margin-right: 1em;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato-Bold";
+  cursor: pointer;
 }
-#submenu{
+.hidden{
   display: none;
 }
-#submenuV2{
+.submenuV2{
   position: absolute;
   top: 5%;
   left: 26%;
@@ -85,11 +92,21 @@ main{
 .left{
   width: 200px;
   height: 619px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
-.left{
+.background{
+  width: 100%;
+  height: 100%;
   margin: 0.5em;
   background: #CA5310 0% 0% no-repeat padding-box;
-  opacity: 1;
+}
+.backgroundV2{
+  width: 100%;
+  height: 100%;
+  margin: 0.5em;
+  background: darkblue 0% 0% no-repeat padding-box;
 }
 .rigth{
   width: 888px;
@@ -109,22 +126,25 @@ main{
   flex-direction: column;
 }
 .card h2, .card p{
-  font-family: 'Lato', sans-serif;
   font-size: 12px;
   margin: 0;
   margin-left: 1em;
   margin-right: 1em;
 }
 .card h2{
-  font-weight: bold !important;
+  font-family: "Lato-Bold";
+}
+.card p{
+  font-family: "Lato-Regular";
 }
 .card button{
   width: 170px;
   margin-top: 1em;
   margin-left: 1em;
   margin-right: 1em;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato-Bold";
   font-size: 14px;
+  cursor: pointer;
 }
 .contentImage{
   margin: 1em;
@@ -133,29 +153,37 @@ main{
   width: 170px;
   height: 170px;
 }
-#submenuResponsivehidden,#submenuResponsive{
+.resHidden{
   display: none;
 }
 .menu{
   display: none;
 }
 @media screen and (max-width:480px){
-  #submenuV2{
-    display: none;
-  }
-  #submenuResponsive{
+  .resNoHidden{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 1em;
+    top: 2.2em;
     width: 100%;
     height: 100%;
     z-index: 1;
     background-color: white;
+    padding: 0;
+    list-style: none;
+  }
+  .resNoHidden li{
+    margin: 1em;
+    font-family: "Lato-Bold";
   }
   .menu{
     display: flex;
     width: 20%;
+  }
+  .menu img{
+    width: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
   }
   .icon{
     width: 80%;

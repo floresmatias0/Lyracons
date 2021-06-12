@@ -1,11 +1,18 @@
-var navbar = document.querySelector(".navbar");
+var background = document.getElementById("change");
 var item3 = document.getElementById("item3");
-var navbarV2 = document.querySelector(".navbarV2")
+var backgroundV2 = document.querySelector(".backgroundV2");
 var aux = true;
 
 item3.addEventListener("click", () => {
-    navbar.setAttribute("class", "navbarV2");
+  if(aux === false){
+    background.className = "background";
+    aux = true;
+  }else if(aux === true){
+    background.className = "backgroundV2";
+    aux = false;
+  }
 })
+
 var product = {
   image:"../assets/images/sony.jpg",
   title:"Titulo del producto",
@@ -17,7 +24,6 @@ var products = [];
 
 for(let i = 0; i < 8; i++){
   products.push(product)
-  console.log(products)
 }
 
 let rigth = document.querySelector(".rigth")
@@ -37,7 +43,7 @@ if(products && products.length > 0){
           <h2>${point.title}</h2>
           <p>${point.marca}</p>
           <p>${point.price}</p>
-          <button>BUTTON</button>
+          <button>COMPRAR</button>
         </div>
       <div>
       `
@@ -46,15 +52,38 @@ if(products && products.length > 0){
 }
 
 let item1 = document.getElementById("item1")
+var item = true;
 
 item1.addEventListener("click", () => {
   let submenu = document.getElementById("submenu")
-  submenu.setAttribute("id", "submenuV2")
+    if(item === true){
+        submenu.className = "submenuV2"
+        item = false;
+    }else if(item === false){
+      submenu.className = "hidden"
+      item = true;
+    }
 })
 
 let menu = document.querySelector(".menu")
-var submenuHidden = document.getElementById("submenuResponsivehidden")
+var submenuRes = document.getElementById("submenuRes")
+var sub = true;
 
 menu.addEventListener("click", () => {
-  submenuHidden.setAttribute("id","submenuResponsive")
+  if(sub === true){
+    submenuRes.className = "resNoHidden";
+    sub = false;
+  }else if(sub === false){
+    submenuRes.className = "resHidden";
+    sub = true;
+  }
 })
+
+let item4 = document.getElementById("item4");
+var saludo = "Hola Mundo!"
+  item4.addEventListener("click", () => {
+    let text = document.createElement("p")
+    text.innerText = `${saludo}`
+    let change = document.getElementById("change");
+    change.append(text);
+  })
